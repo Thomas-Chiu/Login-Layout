@@ -8,14 +8,75 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="./css/bootstrap.css">
+  <!-- webfonts 資料夾要放在外層才抓得到icon -->
   <link rel="stylesheet" href="./css/all.min.css">
-  <title>Document</title>
+  <title>Login</title>
   <style>
+    body {
+      height: 100vh;
+    }
 
+    #logo {
+      font-size: 2rem;
+      width: auto;
+      border-radius: 50%;
+      position: absolute;
+      color: white;
+      top: -50%;
+      left: 50%;
+      transform: translate(-50%, 40%);
+    }
+
+    /* .card {
+      border: 1px solid #fff;
+    } */
   </style>
 </head>
 
 <body>
+
+  <div class="container-fluid h-100 p-0 bg-secondary">
+    <div class="row h-100 justify-content-center align-items-center">
+      <div class="card col-xl-3 col-lg-4 col-md-5 col-6 p-5">
+
+        <form class="needs-validation" novalidate>
+          <div class="input-group d-flex flex-column">
+            <div id="logo" class="text-center p-3 bg-info"><i class="far fa-user"></i></div>
+            <h4 class="text-center text-secondary mb-3">Sign In</h4>
+            <!-- .w-100 控制<input> 不要超出.card -->
+
+
+
+            <label for="userName"></label>
+            <div class="input-group-prepend mb-3">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+              <input id="userName" class="w-100" type="text" placeholder="Username">
+            </div>
+            <label for="password"></label>
+            <div class="input-group-prepend mb-4">
+              <span class="input-group-text"><i class="fas fa-lock"></i></span>
+              <input id="password" class="w-100" type="text" placeholder="Password">
+            </div>
+            <button class="btn btn-block btn-info mb-3">Login</button>
+            <!-- .custom-control <input> 和<label> 都要有，順序有差 -->
+
+            <div class="custom-control custom-checkbox d-flex justify-content-between">
+              <input type="checkbox" id="rememberMe" class="custom-control-input">
+              <label class="custom-control-label" for="rememberMe">
+                <small>Remember me</small>
+              </label>
+              <a href="#"><small class="align-self-center">Forgot Password?</small></a>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="./js/jquery-3.5.1.min.js"></script>
