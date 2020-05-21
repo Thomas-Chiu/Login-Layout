@@ -14,6 +14,20 @@
   <style>
     body {
       height: 100vh;
+      /* 隱藏滑鼠卷軸 */
+      overflow: hidden;
+      background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('./images/wheat.png');
+    }
+
+    small {
+      color: #999;
+      cursor: pointer;
+    }
+
+    a:hover,
+    small:hover {
+      color: #17a2b8;
+      text-decoration: none;
     }
 
     #logo {
@@ -27,39 +41,62 @@
       transform: translate(-50%, 40%);
     }
 
-    /* .card {
-      border: 1px solid #fff;
-    } */
+    #userName,
+    #password {
+      text-indent: 2.2rem;
+    }
+
+    .input-group-text {
+      background-color: #ffffff;
+    }
+
+    .bg-info {
+      opacity: 0.9;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.85);
+    }
+
+    .input-group-prepend {
+      position: relative;
+    }
+
+    .fas {
+      position: absolute;
+      top: 25%;
+      left: 5%;
+    }
   </style>
 </head>
 
 <body>
 
-  <div class="container-fluid h-100 p-0 bg-secondary">
+  <div class="container-fluid h-100 p-0">
     <div class="row h-100 justify-content-center align-items-center">
       <div class="card col-xl-3 col-lg-4 col-md-5 col-6 p-5">
 
         <form class="needs-validation" novalidate>
           <div class="input-group d-flex flex-column">
-            <div id="logo" class="text-center p-3 bg-info"><i class="far fa-user"></i></div>
-            <h4 class="text-center text-secondary mb-3">Sign In</h4>
-            <!-- .w-100 控制<input> 不要超出.card -->
-
-
-
-            <label for="userName"></label>
-            <div class="input-group-prepend mb-3">
-              <span class="input-group-text"><i class="fas fa-user"></i></span>
-              <input id="userName" class="w-100" type="text" placeholder="Username">
+            <div id="logo" class="text-center px-4 py-3 bg-info">
+              <i class="far fa-user"></i>
             </div>
-            <label for="password"></label>
-            <div class="input-group-prepend mb-4">
-              <span class="input-group-text"><i class="fas fa-lock"></i></span>
-              <input id="password" class="w-100" type="text" placeholder="Password">
+            <h4 class="text-center text-secondary mb-4">Sign In</h4>
+            <div class="input-group mb-4">
+              <label for="userName"></label>
+              <!-- <span class="input-group-text"></span> -->
+              <!-- .w-100 控制<input> 不要超出.card -->
+              <i class="fas fa-user" style=></i>
+              <input id="userName" class="w-100 py-1" type="text" placeholder="Username">
+            </div>
+            <div class="input-group mb-4">
+              <label for="password"></label>
+              <!-- <span class="input-group-text"></span> -->
+              <i class="fas fa-lock"></i>
+              <input id="password" class="w-100 py-1" type="text" placeholder="Password">
             </div>
             <button class="btn btn-block btn-info mb-3">Login</button>
             <!-- .custom-control <input> 和<label> 都要有，順序有差 -->
-
             <div class="custom-control custom-checkbox d-flex justify-content-between">
               <input type="checkbox" id="rememberMe" class="custom-control-input">
               <label class="custom-control-label" for="rememberMe">
@@ -73,9 +110,6 @@
       </div>
     </div>
   </div>
-
-
-
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
