@@ -83,17 +83,17 @@
             </div>
             <h4 class="text-center text-secondary mb-4">Sign In</h4>
             <div class="input-group mb-4">
-              <label for="userName"></label>
-              <!-- <span class="input-group-text"></span> -->
+              <label for="userName">
+                <i class="fas fa-user"></i>
+              </label>
               <!-- .w-100 控制<input> 不要超出.card -->
-              <i class="fas fa-user" style=></i>
-              <input id="userName" class="w-100 py-1" type="text" maxlength="20" placeholder="Username">
+              <input id="userName" class="w-100 py-1" type="email" maxlength="20" placeholder="Username" required>
             </div>
             <div class="input-group mb-4">
-              <label for="password"></label>
-              <!-- <span class="input-group-text"></span> -->
-              <i class="fas fa-lock"></i>
-              <input id="password" class="w-100 py-1" type="text" maxlength="20" placeholder="Password">
+              <label for="password">
+                <i class="fas fa-lock"></i>
+              </label>
+              <input id="password" class="w-100 py-1" type="password" maxlength="20" placeholder="Password" required>
             </div>
             <button class="btn btn-block btn-info mb-3">Login</button>
             <!-- .custom-control <input> 和<label> 都要有，順序有差 -->
